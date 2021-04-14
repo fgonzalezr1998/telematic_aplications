@@ -30,3 +30,11 @@ Las etiquetas *país*, *albacete, *ohio* y *estados-unidos* no existen.
 * **3.La ciudad de Toledo:** Se aplica la regla más específica que es *.españa .toledo*. Por lo tanto, color *red*. Además, como se encuentra dentro de la clase *castilla-la-mancha*, se subraya, tal como indica dicha regla.
 * **4.La ciudad de Cuenca:** Sólo aplica la regla contenida en *castilla-la-mancha*. *.toledo, .cuenca*, no, ya que no se encuentra contenido en la clase *toledo*.
 * **5.La ciudad Albacete:** Sólo aplica la regla contenida en *castilla-la-mancha*.
+* **6.El país Estados Unidos:** No aplica ninguna regla.
+
+### Ejemplo 3
+
+* **Párrafo 1:** No aplica ninguna regla.
+* **Párrafo 2, llamado alfa. Está dentro de un elemento div, pero no es un elemento div:** Aplican dos reglas: Las quee stán definidas en *#alfa* y las que están definidas en *p#alfa*.
+
+## 2.2.- Uso de Selectores
