@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>nav2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    <style>
+      * {
+        text-align: center;
+        font-size: 18px;
+      }
+      .panel-footer {
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Javascript -->
+
+    <script>
+      function successBtnCallback() {
+        // window.open('https://google.com','_blank');
+        location.href = 'nav1.html'
+      }
+
+      function infoBtnCallback() {
+        location.href = 'nav2.html';
+      }
+
+      function warnBtnCallback() {
+        location.href = 'nav3.html';
+      }
+    </script>
+
+    <!-- HTML -->
+
+    <div class="container">
+      <div class="panel-info">
+        <div class="panel-heading">
+          Info
+        </div>
+        <div class="panel-body">
+          Presiona el boton que desees
+        </div>
+        <div class="panel-footer">
+          footer
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <button class="btn btn-success" onclick="successBtnCallback()">Success</button>
+        </div>
+        <div class="col-lg-3">
+          <button class="btn btn-info" onclick="infoBtnCallback()">Info</button>
+        </div>
+        <div class="col-lg-3">
+          <button class="btn btn-warning" onclick="warnBtnCallback()">Warning</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
