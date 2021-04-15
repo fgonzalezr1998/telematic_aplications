@@ -36,5 +36,3 @@ Las etiquetas *país*, *albacete, *ohio* y *estados-unidos* no existen.
 
 * **Párrafo 1:** No aplica ninguna regla.
 * **Párrafo 2, llamado alfa. Está dentro de un elemento div, pero no es un elemento div:** Aplican dos reglas: Las quee stán definidas en *#alfa* y las que están definidas en *p#alfa*.
-
-## 2.2.- Uso de Selectores
