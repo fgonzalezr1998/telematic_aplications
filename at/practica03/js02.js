@@ -44,4 +44,4 @@ function conversor(n, out_unit) {
 
 let units = ["m", "cm", "in", "yd"];
 
-console.log(conversor(2, ""));
+console.log(conversor(2, "cm"));
