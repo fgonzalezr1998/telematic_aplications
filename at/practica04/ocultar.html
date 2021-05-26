@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ocultar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      p {
+        text-align: center;
+      }
+
+      .rigth p {
+        text-align: right;
+      }
+
+      .left p {
+        text-align: left;
+      }
+    </style>
+    <script>
+      // jQuery
+
+      function main() {
+        $("#but1").click(function() {
+          $(".left").hide();
+        });
+
+        $("#but2").click(function() {
+          $(".rigth").show();
+          $(".left").show();
+        });
+
+        $("#but3").click(function() {
+          $(".rigth").hide();
+        });
+      }
+
+      $(document).ready(main);  // Entry point
+    </script>
+  </head>
+
+  <body>
+    <p>
+      Texto centrado
+    </p>
+    <div class="rigth">
+      <p>
+        Texto alineado a la derecha
+      </p>
+    </div>
+
+    <div class="left">
+      <p>
+        Texto alineado a la izquierda
+      </p>
+    </div>
+
+    <div>
+      <p style="text-decoration: underline; color: red;">
+        Texto subrayado, centrado y de color rojo
+      </p>
+    </div>
+    <div style="text-align:center;">
+      <button id="but1" type="button">Hide left</button>
+      <button id="but2" type="button">Show all!</button>
+      <button id="but3" type="button">Hide rigth!</button>
+    </div>
+  </body>
+</html>
