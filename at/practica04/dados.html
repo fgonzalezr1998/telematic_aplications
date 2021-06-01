@@ -9,16 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="dados.js"></script>
     <style>
-      * {
-        text-align: center;
-      }
       .buts-container {
+        text-align: center;
         display: block;
       }
       .form-check {
         display: inline-flex;
         margin: 10px;
       }
+
     </style>
   </head>
 
@@ -55,15 +54,36 @@
     </div>
 
     <!-- Boton -->
+    <div style="text-align: center;">
+      <button id="but1" type="button"></button>
+      <br />
 
-    <button id="but1" type="button"></button>
-    <br />
-
-    <!-- Result -->
-    <p id="result" style="font-size: 18px;"></p>
+      <!-- Result -->
+      <p id="result" style="font-size: 18px;"></p>
+    </div>
 
     <!-- Results Table -->
-    
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Hora</th>
+          <th scope="col">Numero de Caras</th>
+          <th scope="col">Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Boton -->
+    <div style="text-align: center;">
+      <button id="but-table" type="button">Clean Table</button>
+      <br />
+    </div>
+
   </body>
 
 </html>

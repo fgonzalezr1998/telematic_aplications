@@ -1,25 +1,30 @@
+'use strict'
 
 // Global variable:
 
-let nSides = null;
+let move =  {
+  time: new Date(),
+  nSides: null,
+  result: 0,
+}
 
 function showButton(radioClass) {
   let butText;
   switch (radioClass) {
     case "flexRadioDefault1":
-      nSides = 2;
+      move.nSides = 2;
       butText = "Lanzar Una Moneda";
       break;
     case "flexRadioDefault2":
-      nSides = 6;
+      move.nSides = 6;
       butText = "Lanzar dado de 6 caras";
       break;
     case "flexRadioDefault3":
-      nSides = 16;
+      move.nSides = 16;
       butText = "Lanzar dado de 16 caras";
       break;
     default:
-      nSides = 20;
+      move.nSides = 20;
       butText = "Lanzar dado de 20 caras";
   }
   $("#but1").text(butText);
@@ -34,9 +39,25 @@ function radioListener() {
 }
 
 function butListener() {
-  if (nSides == null)
+  let res;
+  if (move.nSides == null)
     return;
-  $("#result").text(Math.floor(Math.random() * nSides) + 1);
+  move.res = Math.floor(Math.random() * move.nSides) + 1
+  $("#result").text(move.res);
+
+  move.time = new Date();
+
+  let row = "<tr><td>" + move.time + "</td><td>";
+  row = row + move.nSides + "</td><td>";
+  row = row + move.res + "</td></tr>";
+
+  console.log(row);
+
+  $("table tbody").append(row);
+}
+
+function butTabListener() {
+  $("table tbody tr").remove();
 }
 
 function main() {
@@ -50,6 +71,9 @@ function main() {
 
   // Set the Button Handler
   $("#but1").click(butListener);
+
+  // Set the Button Handler
+  $("#but-table").click(butTabListener);
 }
 
 $(document).ready(main);
