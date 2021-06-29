@@ -39,6 +39,7 @@ function radioListener() {
 }
 
 function butListener() {
+  console.log("jajaj")
   let res;
   if (move.nSides == null)
     return;
@@ -63,6 +64,9 @@ function butTabListener() {
 function main() {
   // Hide the button by default
   $("#but1").hide();
+
+  // Set the but1 tooltip
+  $('[data-toggle="tooltip"]').tooltip();
 
   // Set the Radio Buttons default status
   $("input[type=radio]").prop("checked", false);

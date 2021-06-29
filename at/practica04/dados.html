@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 
+<!--
+
+  This web page implements a tooltip
+-->
+
 <html lang="en">
 
   <head>
     <meta charset="utf-8" />
     <title>Dados</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" /></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="dados.js"></script>
     <style>
       .buts-container {
@@ -55,7 +61,10 @@
 
     <!-- Boton -->
     <div style="text-align: center;">
-      <button id="but1" type="button"></button>
+
+      <button id="but1" type="button" data-toggle="tooltip"
+      data-placement="bottom" title="Pulsar para tirar el dado"></button>
+
       <br />
 
       <!-- Result -->
