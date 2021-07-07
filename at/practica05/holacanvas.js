@@ -5,8 +5,8 @@ import * as vjcanvas from "./vjcanvas.js"
 function main(){
 
     // Fijamos las coordenadas (lógicas)
-    let min_x = -500;
-    let max_x = 500
+    let min_x = -40;
+    let max_x = 960;
     let min_y = -100;
     // max_y no lo especificamos, la librería lo calcula automáticamente
     // para manterner las proporciones gráficas
@@ -28,7 +28,7 @@ function main(){
         } else {
           color = "yellow";
         }
-        vjcanvas.circle(x, y, diametro, color, color_borde, ancho_borde);
+        vjcanvas.circle(x, y, diametro, color, "black", 3);
       }
     }
 };
